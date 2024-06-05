@@ -14,6 +14,7 @@ class Authenticate extends Middleware
      */
     protected function redirectTo($request)
     {
+        Route::get('/', [PostController::class, 'index'])->name('index')->middleware('auth');
         if (! $request->expectsJson()) {
             return route('login');
         }
