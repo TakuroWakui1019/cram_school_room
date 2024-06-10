@@ -12,6 +12,36 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
+    public function room()   
+    {
+        return $this->belongsTo(Room::class);  
+    }
+
+    public function timelines()   
+    {
+        return $this->hasMany(Timeline::class);  
+    }
+
+    public function messages()   
+    {
+        return $this->hasMany(Message::class);  
+    }
+
+    public function reports()   
+    {
+        return $this->hasMany(Report::class);  
+    }
+    
+    public function replies()   
+    {
+        return $this->hasMany(Reply::class);  
+    }
+    
+    public function chats()   
+    {
+        return $this->hasMany(Chat::class);  
+    }
+
     /**
      * The attributes that are mass assignable.
      *
@@ -21,6 +51,8 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'status',
+        'room_id',
     ];
 
     /**
