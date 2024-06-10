@@ -12,11 +12,17 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
+                    <x-nav-link :href="route('indexTimeline', ['user' => Auth::id()])" :active="request()->routeIs('indexTimeline')">
+                        {{ __('ホーム') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('reportCreate')" :active="request()->routeIs('reportCreate')">
-                        {{ __('授業報告') }}
+                    <x-nav-link :href="route('createReport')" :active="request()->routeIs('createReport')">
+                        {{ __('授業報告作成') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('indexReport')" :active="request()->routeIs('indexReport')">
+                        {{ __('授業報告閲覧') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('createStudent')" :active="request()->routeIs('createStudent')">
+                        {{ __('生徒追加') }}
                     </x-nav-link>
                 </div>
             </div>
