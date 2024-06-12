@@ -1,10 +1,8 @@
-<!DOCTYPE HTML>
 <x-app-layout>
     <x-slot name="header">
         　授業報告作成
     </x-slot>
 
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
         <form action="/posts" method="POST">
             @csrf
             
@@ -61,4 +59,3 @@
             <a href="/dashboard">戻る</a>
         </div>
 </x-app-layout>
-</html>

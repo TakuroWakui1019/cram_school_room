@@ -1,7 +1,7 @@
 <x-app-layout>
-    <x-slot name="title">生徒追加</x-slot>
-    
-    <div>生徒追加</div>
+    <x-slot name="header">
+        生徒追加
+    </x-slot>
     
     <form action="/student/store" method="POST">
         @csrf

@@ -39,11 +39,18 @@
             <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
         </div>
         
-        <!-- 教室ID -->
+        <!-- 教室名 -->
         <div>
             <x-input-label for="room_name" :value="__('教室名')" />
             <x-text-input id="room_name" class="block mt-1 w-full" type="text" name="room_name" :value="old('room_name')" required autofocus autocomplete="room_name" />
             <x-input-error :messages="$errors->get('room_name')" class="mt-2" />
+        </div>
+        
+        <!-- status -->
+        <div class="mt-4">
+            <x-input-label for="status" :value="__('社員=>1,アルバイト=>0')" />
+            <x-text-input id="status" class="block mt-1 w-full" type="status" name="status" :value="old('status')" required autocomplete="status" />
+            <x-input-error :messages="$errors->get('status')" class="mt-2" />
         </div>
         
         <div class="flex items-center justify-end mt-4">

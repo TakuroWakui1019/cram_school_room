@@ -6,6 +6,7 @@ use App\Http\Controllers\RoomController;
 use App\Http\Controllers\TimelineController;
 use App\Http\Controllers\ReportController;
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\ChatController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,5 +46,8 @@ Route::get('/report/index', [ReportController::class, 'index'])->name('indexRepo
 
 Route::get('/student/create', [StudentController::class, 'create'])->name('createStudent');
 Route::post('/student/store', [StudentController::class, 'store'])->name('storeStudent');
+
+Route::get('/chat/index', [ChatController::class, 'index'])->name('indexChat');
+Route::get('/chat/{user}', [ChatController::class, 'openChat']);
 
 require __DIR__.'/auth.php';
