@@ -21,9 +21,14 @@
                     <x-nav-link :href="route('indexReport')" :active="request()->routeIs('indexReport')">
                         {{ __('授業報告閲覧') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('createStudent')" :active="request()->routeIs('createStudent')">
-                        {{ __('生徒追加') }}
+                    <x-nav-link :href="route('indexChat')" :active="request()->routeIs('indexChat')">
+                        {{ __('チャット') }}
                     </x-nav-link>
+                    @if(Auth::check() && Auth::user()->status == 1)
+                        <x-nav-link :href="route('createStudent')" :active="request()->routeIs('createStudent')">
+                            {{ __('生徒追加') }}
+                        </x-nav-link>
+                    @endif
                 </div>
             </div>
 

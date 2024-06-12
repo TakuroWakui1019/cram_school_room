@@ -18,6 +18,7 @@ return new class extends Migration
             $table->foreignId('room_id')->constrained()->onDelete('cascade');
             $table->string('name',15);
             $table->string('grade',7);
+            $table->timestamps();
         });
     }
 
