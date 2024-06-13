@@ -49,5 +49,6 @@ Route::post('/student/store', [StudentController::class, 'store'])->name('storeS
 
 Route::get('/chat/index', [ChatController::class, 'index'])->name('indexChat');
 Route::get('/chat/{user}', [ChatController::class, 'openChat']);
+Route::post('/chat', [ChatController::class, 'sendMessage']);
 
 require __DIR__.'/auth.php';

@@ -3,7 +3,7 @@
         　授業報告作成
     </x-slot>
 
-        <form action="/posts" method="POST">
+        <form action="/report/store" method="POST">
             @csrf
             
             <div>

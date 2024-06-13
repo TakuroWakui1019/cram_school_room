@@ -6,9 +6,9 @@
     </x-slot>
 
     @foreach ($users as $user)
-        <div>
-          <a href=" route('openChat') ">{{ $user->name }}</a>
-        </div>
+        
+          <a href="/chat/{{ $user->id }}"> {{ $user->name }}</a>
+        
         <hr>
     @endforeach
 </x-app-layout>
