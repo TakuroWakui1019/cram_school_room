@@ -33,11 +33,8 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('/room/create', [RoomController::class, 'create'])->name('createRoom');
-Route::post('/room/store', [RoomController::class, 'store'])->name('storeRoom');
-Route::get('/room/{room}/show', [RoomController::class, 'show'])->name('showRoom');
-
-
+Route::get('/timeline/create', [TimelineController::class, 'create'])->name('createTimeline');
+Route::post('/timeline/store', [TimelineController::class, 'store'])->name('storeTimeline');
 Route::get('/user/{user}/home', [TimelineController::class, 'index'])->name('indexTimeline');
 
 Route::get('/report/create', [ReportController::class, 'create'])->name('createReport');
