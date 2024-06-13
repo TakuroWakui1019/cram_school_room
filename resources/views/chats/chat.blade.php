@@ -5,6 +5,8 @@
         </h2>
     </x-slot>
 
+    <a href="/chat/index"> ＜＜講師一覧に戻る</a>
+    
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
@@ -25,6 +27,7 @@
                             <li>
                                 <strong>{{ $message->user->name }}:</strong>
                                 <div>{{ $message->body }}</div>
+                                <small>{{ $message->created_at }}</small>
                             </li>
                          @endforeach
                     </ul>

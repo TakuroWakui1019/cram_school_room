@@ -5,7 +5,7 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}">
+                    <a href="{{ route('indexTimeline',['user' => Auth::id()]) }}">
                         <x-application-logo class="block h-9 w-auto fill-current text-gray-800" />
                     </a>
                 </div>
@@ -23,6 +23,9 @@
                     </x-nav-link>
                     <x-nav-link :href="route('indexChat')" :active="request()->routeIs('indexChat')">
                         {{ __('チャット') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('createTimeline')" :active="request()->routeIs('createTimeline')">
+                        {{ __('タイムライン') }}
                     </x-nav-link>
                     @if(Auth::check() && Auth::user()->status == 1)
                         <x-nav-link :href="route('createStudent')" :active="request()->routeIs('createStudent')">
