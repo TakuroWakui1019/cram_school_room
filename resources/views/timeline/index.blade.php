@@ -31,19 +31,19 @@
  </div>
  
  <div>【タイムライン一覧】</div>
- <div class="py-12">
+ @foreach($timelines as $timeline)
+ <div class="py-4">
   <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
    <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
      <div class="p-6 bg-white border-b border-gray-200">
-       @foreach($timelines as $timeline)
          <strong>タイトル:{{ $timeline->title }}</strong>
          <div>本文:{{ $timeline->body }}</div>
          <small>投稿者:{{ $timeline->user->name }}</small>
          <small>　投稿日:{{ $timeline->updated_at }}</small>
-       @endforeach
      </div>
     </div>
    </div>
   </div>
+ @endforeach
  
 </x-app-layout>
