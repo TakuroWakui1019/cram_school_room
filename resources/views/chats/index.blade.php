@@ -9,10 +9,10 @@
     
     <div>講師一覧</div>
 
-    @foreach ($users as $user)
-        
-          <a href="/chat/{{ $user->id }}"> ・{{ $user->name }}</a>
-        
-        <hr>
-    @endforeach
+    <div class="py-1">
+        @foreach ($users as $user)
+            <a href="/chat/{{ $user->id }}"> ・{{ $user->name }}</a>
+            <hr>
+        @endforeach
+    </div>
 </x-app-layout>
