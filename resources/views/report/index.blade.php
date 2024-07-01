@@ -1,11 +1,11 @@
 <x-app-layout>
     <x-slot name="title">授業報告一覧</x-slot>
     
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            授業報告一覧
-        </h2>
-    </x-slot>
+    <div class="title py-4">
+        <h1>
+            <strong>授業報告一覧</strong>
+        </h1> 
+    </div>
 
     @foreach ($reports as $report)
         <div class="py-12">

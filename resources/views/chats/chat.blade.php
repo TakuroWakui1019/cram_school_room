@@ -1,11 +1,15 @@
 <x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                チャット
-        </h2>
-    </x-slot>
+    <div class="title py-4">
+        <h1>
+            <strong>チャットルーム</strong>
+        </h1> 
+    </div>
 
-    <a href="/chat/index"> ＜＜講師一覧に戻る</a>
+    <a href="/chat/index"> 
+        <div class="hover-text">
+            ＜＜講師一覧に戻る
+        </div>
+    </a>
     
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
@@ -22,13 +26,21 @@
                         <button type="submit" class="text-white bg-blue-700 px-5 py-2">送信</button>
                     </form>
                 
-                    <ul class="list-disc" id="list_message">
+                    <ul class="list-disc py-12" id="list_message">
                         @foreach ($messages as $message)
-                            <li>
-                                <strong>{{ $message->user->name }}:</strong>
-                                <div>{{ $message->body }}</div>
-                                <small>{{ $message->created_at }}</small>
-                            </li>
+                            <div class="py-1">
+                                <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+                                    <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                                        <div class="p-2 back-sky02 border-b border-gray-200">
+                                            <li>
+                                                <strong>{{ $message->user->name }}:</strong>
+                                                <div>{{ $message->body }}</div>
+                                                <small>{{ $message->created_at }}</small>
+                                            </li>
+                                        </div>
+                                    </div>    
+                                </div>    
+                            </div>    
                          @endforeach
                     </ul>
                 </div>
