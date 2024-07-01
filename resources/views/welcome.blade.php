@@ -6,34 +6,26 @@
         <title>塾専用の情報共有アプリ トップページ</title>
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
+        <link rel="stylesheet" href="./css/app.css">
     </head>
-    <body class="bg-orange-300 max-h-full">
-      <header class="bg-gray-400 text-gray-800 font-bold font-mono text-3xl">
+    <body class="bg-white max-h-full">
+      <header class="back-sky text-gray-800 font-bold font-mono text-3xl">
         <div class="text-center text-base p-2 flex justify-end">
           <ul>
+            <div class="hover-text">
             <li class="p-2 text-lg font-bold"><a href="/login">ログイン</a></li>
+            </div>
+            <div class="hover-text">
             <li class="p-2 text-lg font-bold"><a href="/register">新規登録</a></li>
+            </div>
           </ul>
         </div>
       </header>
       <main>
-        <div class="text-gray-800 font-bold font-mono text-center text-3xl p-4">
+        <div class="text-red font-bold font-mono text-center text-3xl p-4">
           塾専用の情報共有アプリ トップページ
         </div>
 
-        <div class="flex justify-end">
-          <div class="bg-white p-2 mx-4 my-2 w-1/4">
-            <h1 class="text-lg font-bold">テストユーザー</h1>
-            <div class="text-center">test01</div>
-            <h1 class="text-lg font-bold">メールアドレス</h1>
-            <div class="text-center">test01@mail.com</div>
-            <h1 class="text-lg font-bold">パスワード</h1>
-            <div class="text-center">test01test01</div>
-            <div class="text-end">
-              <a class="font-bold" href="/login">ログインへ</a>
-            </div>
-          </div>
-        </div>
       </main>
     </body>
 </html>

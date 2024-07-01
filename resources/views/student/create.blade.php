@@ -1,9 +1,9 @@
 <x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            生徒を追加
-        </h2>
-    </x-slot>
+    <div class="title py-4">
+        <h1>
+            <strong>生徒を追加</strong>
+        </h1> 
+    </div>
     
     <form action="/student/store" method="POST">
         @csrf
