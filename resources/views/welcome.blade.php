@@ -6,7 +6,7 @@
         <title>塾専用の情報共有アプリ トップページ</title>
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
-        <link rel="stylesheet" href="./css/app.css">
+        <link rel="stylesheet" href="./resources/css/app.css">
     </head>
     <body class="bg-white max-h-full">
       <header class="back-sky text-gray-800 font-bold font-mono text-3xl">
